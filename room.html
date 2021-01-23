@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rooms</title>
+</head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+
+	*{
+		padding: 0;
+		margin: 0;
+	}
+
+	.head{
+		width: 100%;
+		height: 300px;
+		background-image: url(images/img1.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.head .logo{
+		background-image: url(images/logo.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100px;
+		height: 70px;
+		float: left;
+		margin-left: 20px;
+	}
+
+	.head .nav{
+		padding-top: 10px;
+		padding-right: 20px;
+	}
+
+	.head .nav .menu{
+	border: 1px solid #F8F8F8;
+	width: 40px;
+	height: 30px;
+	display: block;
+	cursor: pointer;
+	margin-right: 10px;
+	float: right;
+}
+
+.head .nav .menu .dash{
+	width: 30px;
+	height: 3px;
+	margin: 5px auto;
+	background-color: #F8F8F8;
+}
+
+.head .nav .content{
+    overflow: hidden;
+    position: relative;
+    left: 55px;
+    top: 30px;
+    display: none;
+}
+
+.head .nav .content a{
+    color: black;
+    padding: 18px 20px;
+    position: relative;
+    display: block;
+    text-align: right;
+    font-family: helvetica;
+    font-size: 12px;
+    color: #fff;
+    transition: all .5s ease;
+    text-decoration: none;
+}
+
+.head .nav .content a:hover{
+	text-decoration: underline;
+	text-decoration-color: #DB9200;
+	transition: all .5s ease;
+}
+
+.head .nav .content a #book{
+	width: 100px;
+	height: 20px;
+	background-color: #DB9200;
+	padding-right: 20px;
+	padding-top:5px;
+	margin-bottom: 40px;
+	border-radius: 2px;
+	color: #fff;
+	float: right;
+}
+
+.text{
+	position: absolute;
+	top: 100px;
+	margin-left: 40px;
+}
+
+.text h3, .text p{
+	font-family: helvetica;
+	color: #fff;
+}
+
+.text h3{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.text p{
+	font-size: 12px;
+	margin-bottom: 30px;
+}
+
+.text .goldline{
+	width: 20px;
+	height: 3px;
+	background-color: #DB9200; 
+}
+
+.text .line{
+	width: 200px;
+	height: 2px;
+	background-color: #fff;
+}
+
+.text2{
+	text-align: center;
+}
+
+.text2 h3, p{
+	font-family: helvetica;
+	color: black;
+}
+
+.text2 h3{
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.text2 p{
+	font-size: 12px;
+	margin-bottom: 30px;
+}
+
+.text2 .goldline{
+	display: none;
+	width: 20px;
+	height: 3px;
+	background-color: #DB9200; 
+}
+
+.text2 .line{
+	display: none;
+	width: 200px;
+	height: 2px;
+	background-color: lightgrey;
+}
+
+.rooms{
+	width: 300px;
+	margin: 20px auto;
+}
+
+.rooms .img{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 170px;
+}
+
+.rooms .b1{
+	background-image: url(images/room1.png);
+}
+
+.rooms .b2{
+	background-image: url(images/room2.png);
+}
+
+.rooms .b3{
+	background-image: url(images/room3.png);
+}
+
+.rooms .b4{
+	background-image: url(images/room4.png);
+}
+
+.rooms h5{
+	font-family: helvetica;
+	font-size: 15px;
+	float: left;
+	margin-top: 10px;
+}
+
+.rooms a{
+	text-decoration: none;
+}
+
+.rooms h6{
+	font-size: 12px;
+	font-family: helvetica;
+	color: black;
+	float: right;
+	margin-top: 10px;
+}
+
+.rooms p{
+	clear: both;
+	font-size: 12px;
+	font-family: helvetica;
+	color: #DB9200;
+	padding-top: 10px;
+}
+
+.text3{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.text3 p{
+	font-family: helvetica;
+	color: black;
+	font-size: 12px;
+	margin-bottom: 30px;
+}
+
+
+.text3 .goldline{
+	display: none;
+	width: 20px;
+	height: 3px;
+	background-color: #DB9200; 
+}
+
+.text3 .line{
+	display: none;
+	width: 200px;
+	height: 2px;
+	background-color: lightgrey;
+}
+
+.promo p{
+	font-family: helvetica;
+	color: #0C242E;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.promo a #book{
+	width: 100px;
+	height: 20px;
+	background-color: #DB9200;
+	text-align: center;
+	padding-top:5px;
+	margin: 10px auto;
+	border-radius: 2px;
+	color: #fff;
+}
+
+.promo a{
+	text-decoration: none;
+}
+
+
+
+.footer{
+	width: 100%;
+	background-color: #0C242E;
+	padding-bottom: 20px;
+}
+
+.footer .first, .second, .third{
+	margin-left: 20px;
+}
+
+
+.footer .first p{
+	font-family: helvetica;
+	color: #fff;
+	font-size: 12px;
+	margin-left: 65px;
+	margin-top: -30px
+}
+
+.footer .first img{
+	margin-top: 40px;
+	margin-left: 25px;
+}
+
+.footer .second .logo{
+	background-image: url(images/logo.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 70px;
+	margin: 20px 0 10px 0;
+}
+
+.footer .second img{
+	margin: 0 20px 0 10px;
+}
+
+
+.footer .third h5{
+	clear: both;
+    font-family: helvetica;
+    font-size: 15px;
+    font-weight: bold;
+    color: #DB9200;
+    margin: 30px 0 10px 10px;
+}
+
+.footer .third ul{
+	list-style-type: none;
+	font-family: helvetica;
+	color: #fff;
+	font-size: 12px;
+	margin-left: 10px;
+	margin-bottom: 50px;
+}
+
+.footer .third ul li{
+	margin: 10px 0 10px 0;
+	color: #fff;
+	font-family: helvetica;
+	font-size: 12px;
+}
+
+.footer .third ul a{
+	text-decoration: none;
+}
+
+.footer .bottom{
+	color: #fff;
+	font-family: helvetica;
+	font-size: 12px;
+	text-align: center;
+}
+
+
+
+
+@media screen and (min-width: 700px)
+{
+	*{
+		max-width: 1150px;
+	}
+	.head .logo{
+        width: 100px;
+        height: 60px;
+	}
+
+	.head .nav .content a{
+		font-size: 15px;
+	}
+
+	.head .nav .content a #book{
+		width: 110px;
+	}
+}
+
+
+
+
+
+@media screen and (min-width: 1150px)
+{
+	*{
+		max-width: 1300px;
+		margin: auto;
+	}
+
+	.head .nav{
+		margin-left: 30px;
+	}
+	.head .nav .menu{
+		display: none;
+	}
+
+	.head .nav .content{
+		display: block;
+		top: 0;
+		text-align: right;
+		margin-right: 50px;
+	}
+
+	.head .nav .content a{
+		display: inline-block;
+	}
+
+	.head .nav .content a #book{
+	    float: none;
+   }
+
+   .text2, .text3{
+   	float: left;
+   }
+
+   .text2 .line, .text2 .goldline{
+   	display: block;
+   }
+
+   .text3 .line, .text3 .goldline{
+   	display: block;
+   }
+
+
+   .rooms{
+   	float: right;
+   	margin-left: 70px;
+   	margin-right: 70px;
+   }
+
+   .promo{
+   	clear: both;
+   	padding-top: 30px;
+   }
+
+   .footer .first, .second, .third{
+   	    float: left;
+   	    margin: 0 100px 0 100px;
+   }
+
+   .footer .bottom{
+        clear: both;
+        padding-top: 50px;
+   }
+
+   
+
+   .footer{
+    	display: inline-block;
+    	margin-top: 20px;
+   }
+
+
+}
+  
+</style>
+
+
+<body>
+		<div class="head">
+
+			<a href="index.html"><div class="logo"></div></a>
+
+            <div class="nav">
+                 <div class="menu">
+		         <div class="dash"></div>
+		         <div class="dash"></div>
+		         <div class="dash"></div>
+	             </div>
+	
+	       <div class="content">
+		         <a href="index.html">Home</a>
+		         <a href="#">Rooms & Rates</a>
+		         <a href="#">Facilities</a>
+		         <a href="#">Contact Us</a>
+		         <a href="#">
+			     <div id="book">Book a Room</div>
+		         </a>
+	       </div> 
+
+	       </div>
+
+        </div>
+
+
+
+         <div class="text">
+	       	<h3>Rooms & Rates</h3>
+	       	<p>All rooms and suites have individually</br>controlled air-conditioning, colour TV</br>with 20 satellite channels, mini-bar,</br>tea and coffee making facilities,</br>direct-dial telephones, luxury private</br>bathrooms, hairdryer, razor point and</br>electronic safes in rooms.</p>
+	       	<div class="goldline"></div>
+	       	<div class="line"></div>
+	       </div>
+
+	     <div class="text2">
+	     	<h3>Explore Our Rooms</h3>
+	     	<p>With over 400 rooms, the lidapearl Hotels</br>offers alot of dedicated choices for all our</br>Guest, from our Standard Rooms to</br>Presidential Suites, our guest will always</br>find the most customised option to make</br> their stay in Lagos a very pleasurable and</br>memorable one of all</p>
+	     	<div class="goldline"></div>
+	       	<div class="line"></div>
+	     </div>
+
+	     <div class="rooms">
+	     	<div class="img b1"></div>
+	     	<h5>Executive Suites</h5>
+	     	<a href=""><h6>Read More</h6></a>
+	     	<p>N58,000/per night</p>
+	     </div>
+
+	     <div class="rooms">
+	     	<div class="img b2"></div>
+	     	<h5>Standard Queen Room</h5>
+	     	<a href=""><h6>Read More</h6></a>
+	     	<p>N87,000/per night</p>
+	     </div>
+
+	     <div class="rooms">
+	     	<div class="img b3"></div>
+	     	<h5>Luxury King Room</h5>
+	     	<a href=""><h6>Read More</h6></a>
+	     	<p>N106,000/per night</p>
+	     </div>
+
+	     <div class="rooms">
+	     	<div class="img b4"></div>
+	     	<h5>Executive King Rooms</h5>
+	     	<h6>Read More</h6>
+	     	<a href=""><p>140,000/per night</p></a>
+	     </div>
+
+
+	     <div class="text3">
+	     	<p>Other services includes free wi-fi in all the</br>hotel, internet corner with free internet,</br>Laundry service, daily press, fax</br>service, car rental, restaurant reservations</br>and excursion</br></p>
+	     	<div class="goldline"></div>
+	       	<div class="line"></div>
+	     </div>
+
+
+        <div class="promo">
+	     <p>Get 30% off on Hotel room or any other event today</p>
+	     <a href="#"><div id="book">Book a Room</div></a>
+	    </div>
+	     
+
+
+
+
+
+
+     <div class="footer">
+
+          <div class="first">
+          	<div class="address">
+          		<img src="images/Group.png">
+          		<p>117 Opebi road, off Allen Avenue,</br>Ikeja, Lagos</p>
+          	</div>
+
+          	<div class="mail">
+          		<img src="images/Vector4.png">
+          		<p>reservation@lidapearlhotel.com</br>info@lidapearl.com</p>
+          	</div>
+
+          	<div class="phone">
+          		<img src="images/Vector.png">
+          		<p>(234) 081 0032 1853</br>(234) 070 2892 1022</p>
+          	</div>
+          </div>
+
+          <div class="second">
+          	<div class="logo"></div>
+          	<img src="images/Vector3.png">
+          	<img src="images/Vector1.png">
+          	<img src="images/Vector2.png">
+          </div>
+
+          <div class="third">
+          	<h5>Quick Links</h5>
+          	<ul>
+          		<a href=""><li>Home</li></a>
+          		<a href=""><li>Room & Rates</li></a>
+          		<a href=""><li>Facilities</li></a>
+          		<a href=""><li>Contact us</li></a>
+          	</ul>
+          </div>
+
+          <p class="bottom">(C) 2020 Lidapearl Hotel</p>
+
+     </div>
+
+
+
+
+     <script>
+     	  var coll = document.getElementsByClassName('menu');
+          var i;
+
+          for (i = 0; i < coll.length; i++) {
+	      coll[i].addEventListener('click', function () {
+		  this.classList.toggle('active');
+		  var content = this.nextElementSibling;
+		  if (content.style.display === 'block') {
+			    content.style.display ='none';
+		  } else {
+			    content.style.display = 'block';
+		     }
+	      });
+        }
+     </script>
+
+
+
+</body>
+</html>
