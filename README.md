@@ -1,1 +1,1 @@
-# Hotel-Rooms-Rate
+# Lidapearl Hotel-Rooms&Rates page
